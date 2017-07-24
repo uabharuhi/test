@@ -5,17 +5,17 @@
   
   <title>在github上面用ssh協定 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#概要在github上面用ssh當作和local端溝通的協定,最主要是在push的時候比較省事,不用打帳號密碼。 #資源ssh generate  #ssh(以下是我自己的理解,可能有些地方有點錯誤,而且比較簡略一點)用ssh當作溝通的協定,需要透過兩台電腦(server和client)知道對方是個合法的存在。怎樣知道對方是合法?利用互相的public key。在github的例子中,就是gith">
+  <meta name="description" content="概要在github上面用ssh當作和local端溝通的協定,最主要是在push的時候比較省事,不用打帳號密碼。 資源ssh generate  ssh(以下是我自己的理解,可能有些地方有點錯誤,而且比較簡略一點)用ssh當作溝通的協定,需要透過兩台電腦(server和client)知道對方是個合法的存在。怎樣知道對方是合法?利用互相的public key。在github的例子中,就是github">
 <meta name="keywords" content="設定">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在github上面用ssh協定">
 <meta property="og:url" content="https://uabharuhi.github.io/test/2017/07/24/github-ssh/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#概要在github上面用ssh當作和local端溝通的協定,最主要是在push的時候比較省事,不用打帳號密碼。 #資源ssh generate  #ssh(以下是我自己的理解,可能有些地方有點錯誤,而且比較簡略一點)用ssh當作溝通的協定,需要透過兩台電腦(server和client)知道對方是個合法的存在。怎樣知道對方是合法?利用互相的public key。在github的例子中,就是gith">
-<meta property="og:updated_time" content="2017-07-24T09:11:42.220Z">
+<meta property="og:description" content="概要在github上面用ssh當作和local端溝通的協定,最主要是在push的時候比較省事,不用打帳號密碼。 資源ssh generate  ssh(以下是我自己的理解,可能有些地方有點錯誤,而且比較簡略一點)用ssh當作溝通的協定,需要透過兩台電腦(server和client)知道對方是個合法的存在。怎樣知道對方是合法?利用互相的public key。在github的例子中,就是github">
+<meta property="og:updated_time" content="2017-07-24T09:16:02.129Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在github上面用ssh協定">
-<meta name="twitter:description" content="#概要在github上面用ssh當作和local端溝通的協定,最主要是在push的時候比較省事,不用打帳號密碼。 #資源ssh generate  #ssh(以下是我自己的理解,可能有些地方有點錯誤,而且比較簡略一點)用ssh當作溝通的協定,需要透過兩台電腦(server和client)知道對方是個合法的存在。怎樣知道對方是合法?利用互相的public key。在github的例子中,就是gith">
+<meta name="twitter:description" content="概要在github上面用ssh當作和local端溝通的協定,最主要是在push的時候比較省事,不用打帳號密碼。 資源ssh generate  ssh(以下是我自己的理解,可能有些地方有點錯誤,而且比較簡略一點)用ssh當作溝通的協定,需要透過兩台電腦(server和client)知道對方是個合法的存在。怎樣知道對方是合法?利用互相的public key。在github的例子中,就是github">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -86,25 +86,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#概要<br>在github上面用ssh當作和local端溝通的協定,最主要是在push的時候比較省事,不用打帳號密碼。</p>
-<p>#資源<br><a href="https://git-scm.com/book/zh-tw/v1/%E4%BC%BA%E6%9C%8D%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E7%94%9F%E6%88%90-SSH-%E5%85%AC%E9%96%8B%E9%87%91%E9%91%B0" target="_blank" rel="external">ssh generate</a> </p>
-<p>#ssh<br>(以下是我自己的理解,可能有些地方有點錯誤,而且比較簡略一點)<br>用ssh當作溝通的協定,需要透過兩台電腦(server和client)知道對方是個合法的存在。<br>怎樣知道對方是合法?利用互相的public key。<br>在github的例子中,就是github server先知道client的public key,利用client的public key<br>加密要傳送的資訊。</p>
+        <h1 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h1><p>在github上面用ssh當作和local端溝通的協定,最主要是在push的時候比較省事,不用打帳號密碼。</p>
+<h1 id="資源"><a href="#資源" class="headerlink" title="資源"></a>資源</h1><p><a href="https://git-scm.com/book/zh-tw/v1/%E4%BC%BA%E6%9C%8D%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E7%94%9F%E6%88%90-SSH-%E5%85%AC%E9%96%8B%E9%87%91%E9%91%B0" target="_blank" rel="external">ssh generate</a> </p>
+<h1 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h1><p>(以下是我自己的理解,可能有些地方有點錯誤,而且比較簡略一點)<br>用ssh當作溝通的協定,需要透過兩台電腦(server和client)知道對方是個合法的存在。<br>怎樣知道對方是合法?利用互相的public key。<br>在github的例子中,就是github server先知道client的public key,利用client的public key<br>加密要傳送的資訊。</p>
 <p>大致上的確認流程:<br>client向server發出某種請求<br>因為client端的public key,只能用client private key來解(詳細請看非對稱加密的觀念),解完之後得到server傳過來的資訊,<br>再用server端的public key丟回去,server端用server的private key解開,解出來如果是正確的,那就代表對方確實是<br>client public key的對象。</p>
 <p>server端要先知道client的public key,通常的情況就是Server上的管理員,把認證為可以信任的<br>client 的 public key,丟到Server上的某個地方,所以把public key丟到server上,用上述的確認流程,<br>最後得到的public key如果就是信任的client的public key,代表那台發出請求的Client,是被管理員所信任的。</p>
-<p>#大致流程<br>1.首先,要讓你這台電腦產生一個public key<br>2.然後把這台電腦的public key丟到github server上,通常就是你的github account的地方。<br>3.沒了</p>
-<p>#在windows產生public key<br>1.去github bash</p>
+<h1 id="大致流程"><a href="#大致流程" class="headerlink" title="大致流程"></a>大致流程</h1><p>1.首先,要讓你這台電腦產生一個public key<br>2.然後把這台電腦的public key丟到github server上,通常就是你的github account的地方。<br>3.沒了</p>
+<h1 id="在windows產生public-key"><a href="#在windows產生public-key" class="headerlink" title="在windows產生public key"></a>在windows產生public key</h1><p>1.去github bash</p>
 <ol>
 <li><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>3.之後會問你三個問題,基本上是一些設定上的問題,全部都按下enter給他過去。<br>4.之後在剛剛的問題裡面,第一個問題 Enter file in which to save the key<br>  是存key資訊的位置<br>5.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure></p>
 <p>把id_rsa.pub上面的東西全部貼到github上</p>
-<p>#把public key丟到github上<br>去點github profile,上面有一個setting,setting裡面有一個<br>“ssh and gpg keys”,new ssh key,然後把剛剛那一個檔案上面全部的內容複製貼上。<br>存起來之後結束。</p>
+<h1 id="把public-key丟到github上"><a href="#把public-key丟到github上" class="headerlink" title="把public key丟到github上"></a>把public key丟到github上</h1><p>去點github profile,上面有一個setting,setting裡面有一個<br>“ssh and gpg keys”,new ssh key,然後把剛剛那一個檔案上面全部的內容複製貼上。<br>存起來之後結束。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://uabharuhi.github.io/test/2017/07/24/github-ssh/" data-id="cj5hxrs540000v4inyufs24ug" class="article-share-link">Share</a>
+      <a data-url="https://uabharuhi.github.io/test/2017/07/24/github-ssh/" data-id="cj5hxtoz800007oin889vpnan" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/test/tags/設定/">設定</a></li></ul>
