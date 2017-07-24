@@ -3,14 +3,19 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>在github上面用ssh協定 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://uabharuhi.github.io/test/index.html">
+  <meta name="description" content="#概要在github上面用ssh當作和local端溝通的協定,最主要是在push的時候比較省事,不用打帳號密碼。 #資源ssh generate  #ssh(以下是我自己的理解,可能有些地方有點錯誤,而且比較簡略一點)用ssh當作溝通的協定,需要透過兩台電腦(server和client)知道對方是個合法的存在。怎樣知道對方是合法?利用互相的public key。在github的例子中,就是gith">
+<meta name="keywords" content="設定">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在github上面用ssh協定">
+<meta property="og:url" content="https://uabharuhi.github.io/test/2017/07/24/github-ssh/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#概要在github上面用ssh當作和local端溝通的協定,最主要是在push的時候比較省事,不用打帳號密碼。 #資源ssh generate  #ssh(以下是我自己的理解,可能有些地方有點錯誤,而且比較簡略一點)用ssh當作溝通的協定,需要透過兩台電腦(server和client)知道對方是個合法的存在。怎樣知道對方是合法?利用互相的public key。在github的例子中,就是gith">
+<meta property="og:updated_time" content="2017-07-24T09:11:42.220Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="在github上面用ssh協定">
+<meta name="twitter:description" content="#概要在github上面用ssh當作和local端溝通的協定,最主要是在push的時候比較省事,不用打帳號密碼。 #資源ssh generate  #ssh(以下是我自己的理解,可能有些地方有點錯誤,而且比較簡略一點)用ssh當作溝通的協定,需要透過兩台電腦(server和client)知道對方是個合法的存在。怎樣知道對方是合法?利用互相的public key。在github的例子中,就是gith">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-github-ssh" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-github-ssh" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/test/2017/07/24/github-ssh/" class="article-date">
   <time datetime="2017-07-24T08:16:37.000Z" itemprop="datePublished">2017-07-24</time>
@@ -74,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/2017/07/24/github-ssh/">在github上面用ssh協定</a>
+    <h1 class="article-title" itemprop="name">
+      在github上面用ssh協定
     </h1>
   
 
@@ -109,55 +112,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/test/2017/07/24/hello-world/" class="article-date">
-  <time datetime="2017-07-24T06:46:38.513Z" itemprop="datePublished">2017-07-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/test/2017/07/24/hello-world/">Hello World</a>
-    </h1>
+    <a href="/test/2017/07/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://uabharuhi.github.io/test/2017/07/24/hello-world/" data-id="cj5hxrs5e0001v4in7z6mmvqx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
@@ -245,23 +212,6 @@
 
 <script src="/test/js/script.js"></script>
 
-  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
